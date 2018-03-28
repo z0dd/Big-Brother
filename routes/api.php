@@ -14,11 +14,11 @@ use Illuminate\Http\Request;
 */
 Route::group(['middleware'=>'auth:api'],function (){
 
-	Route::get('users', 'UsersController@index');
-	Route::get('users/{id}', 'UsersController@show');
-	Route::post('users', 'UsersController@store');
-	Route::put('users/{id}', 'UsersController@update');
-	Route::delete('users/{id}', 'UsersController@delete');
+	Route::get('users', 'FaceUsersController@index');
+	Route::get('users/{id}', 'FaceUsersController@show');
+	Route::post('users', 'FaceUsersController@store');
+	Route::put('users/{id}', 'FaceUsersController@update');
+	Route::delete('users/{id}', 'FaceUsersController@delete');
 	
 	/*Route::get('users', function ()	{
 		return User::all();
