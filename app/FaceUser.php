@@ -14,4 +14,14 @@ class FaceUser extends Model
     protected $fillable = [
         'name', 'master_token',
     ];
+
+    public function phrases()
+    {
+        return $this->hasMany('App\Phrase', 'user_id', 'id');
+    }
+
+    public function faceTokens()
+    {
+        return $this->hasMany('App\FaceToken', 'user_id', 'id');
+    }
 }

@@ -12,6 +12,6 @@ class FaceToken extends Model
      * @var array
      */
     protected $fillable = [
-        'face_token',
+        'user_id','face_token',
     ];
 }

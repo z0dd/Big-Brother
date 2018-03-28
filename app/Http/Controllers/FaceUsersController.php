@@ -14,7 +14,7 @@ class FaceUsersController extends Controller
  
     public function show($id)
     {
-        return FaceUser::find($id);
+        return FaceUser::find($id)->with(['phrases','faceTokens'])->get();
     }
 
     public function store(Request $request)
